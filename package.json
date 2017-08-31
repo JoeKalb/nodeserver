@@ -1,0 +1,18 @@
+{
+  "name": "serverv1",
+  "version": "1.0.0",
+  "description": "server for digital artists database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "hot": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2"
+  }
+}
