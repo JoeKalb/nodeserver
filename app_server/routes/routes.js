@@ -7,6 +7,6 @@ router.get('/', function(req, res) {
 	res.json({message: 'The server is working!'});
 });
 
-router.get('/twitch/:code', twitchOauth.grabTwitchData);
+router.get('/twitch/:code', twitchOauth.grabTwitchTokens);
 
 module.exports = router;
