@@ -3,12 +3,10 @@ const { CONFIG } = require('./config');
 
 
 module.exports.grabTwitchData = function(req, res, next){
-  let call = 'https://api.twitch.tv/kraken/oauth2/token?client_id={client_ID}&client_secret={client_secret}&code={code}&grant_type=authorization_code&redirect_uri={redirect}';
-  console.log(CONFIG);
-  call = call.replace('{client_ID}', CONFIG.client_id)
-				.replace('{client_secret}', CONFIG.client_secret)
-				.replace('{code}', req.params.code)
-				.replace('{redirect}', CONFIG.redirect_uri);
+  let header = new Headers();
+  header.append('Accept', 'application/vnd.twitchtv.v5+json');
+  header.append('Client-ID', CONFIG.client_id);
+  header.append('Authorization', 'OAuth ' + this.state.tokens.access_token);
   let promise = fetch(call, {
     method: "POST"
   }).then((twitchRes) => {
