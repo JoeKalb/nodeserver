@@ -2,7 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const passport = require('passport');
 
-//require('./app_server/models/db');
+require('./app_server/models/db');
 
 const app = express();
 const port = process.env.PORT || 3000;
