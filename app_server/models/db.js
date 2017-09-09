@@ -7,3 +7,4 @@ dynamodb.getItem(params, function(err, data) {
                      }
                  });
 */
+// add local host testing first i guess... 
